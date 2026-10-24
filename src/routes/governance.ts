@@ -13,7 +13,8 @@ router.get("/status", (_req, res) => {
       active: true,
       totalFarmers: farmers.length,
       totalGovernancePower: farmers.reduce(
-        (sum, farmer) => sum + governanceService.calculateGovernancePower(farmer),
+        (sum, farmer) =>
+          sum + governanceService.calculateGovernancePower(farmer),
         0
       )
     }

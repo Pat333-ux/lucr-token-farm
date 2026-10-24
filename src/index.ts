@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import stakingRoutes from "./routes/staking";
 import rewardsRoutes from "./routes/rewards";
 import farmersRoutes from "./routes/farmers";
+import governanceRoutes from "./routes/governance";
+import treasuryRoutes from "./routes/treasury";
 
 dotenv.config();
 
@@ -14,6 +16,8 @@ app.use(express.json());
 app.use("/api/staking", stakingRoutes);
 app.use("/api/rewards", rewardsRoutes);
 app.use("/api/farmers", farmersRoutes);
+app.use("/api/governance", governanceRoutes);
+app.use("/api/treasury", treasuryRoutes);
 
 const PORT = process.env.PORT || 3000;
 
@@ -44,3 +48,5 @@ app.get("/farm/info", (_req, res) => {
 app.listen(PORT, () => {
   console.log(`LUCR Farm API running on port ${PORT}`);
 });
+
+export default app;
