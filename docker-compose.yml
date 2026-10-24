@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  lucr-farm:
+    build: .
+    container_name: lucr-token-farm
+    restart: unless-stopped
+
+    ports:
+      - "3000:3000"
+
+    env_file:
+      - .env
