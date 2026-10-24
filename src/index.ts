@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import stakingRoutes from "./routes/staking";
+import rewardsRoutes from "./routes/rewards";
 
 dotenv.config();
 
@@ -8,6 +10,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use("/api/staking", stakingRoutes);
+app.use("/api/rewards", rewardsRoutes);
 
 const PORT = process.env.PORT || 3000;
 
