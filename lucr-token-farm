@@ -1,0 +1,36 @@
+{
+  "name": "lucr-token-farm",
+  "version": "1.0.0",
+  "description": "LUCR Token Farming Engine",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "farm": "tsx src/core/farm-engine.ts",
+    "rewards": "tsx src/core/reward-engine.ts"
+  },
+  "keywords": [
+    "lucr",
+    "dao",
+    "farming",
+    "staking",
+    "web3",
+    "governance"
+  ],
+  "author": "Pat Tarwater Jr",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "express": "^4.21.1",
+    "cors": "^2.8.5",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.7",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}
